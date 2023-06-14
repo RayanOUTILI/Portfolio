@@ -8,3 +8,25 @@
         font-size: 1rem;
     }
 }
+
+nav>ul>li>a {
+    color: black;
+    font-weight: bold;
+    text-decoration: no-underline;
+    position: relative;
+}
+
+nav>ul>li>a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(206, 206, 255);
+    transition: width 0.2s ease-out;
+}
+
+nav>ul>li>a:hover::before {
+    width: 100%;
+}
