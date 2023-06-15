@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: Poppins,sans-serif; 
+  font-family: Poppins, sans-serif;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -23,12 +23,34 @@ code {
     monospace;
 }
 
-#home h1 {
+#home h1,
+#about h1,
+#home h2 {
   color: #2d2e32;
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
   font-weight: 700;
+}
+
+@media (max-width: 950px) {
+
+  #home h1,
+  #about h1,
+  #home h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 600px) {
+
+  #home h1,
+  #about h1,
+  #home h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 }
 
 
@@ -40,12 +62,39 @@ code {
   gap: 2rem;
 }
 
-.main-content-left{
+.main-content-left {
   display: flex;
   flex-direction: column;
 }
 
-.main-content-left, .main-content-right{
+.main-content-left,
+.main-content-right {
   display: flex;
   max-width: 50%;
+}
+
+@media (max-width:950px) {
+  .home-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .main-content-left,
+  .main-content-right {
+    max-width: 80%;
+  }
+
+  .main-content-right {
+    margin-top: 1rem;
+  }
+
+  .home-content {
+    flex-direction: column;
+  }
+
+  .home-conteneur {
+    height: 80vh !important;
+  }
 }

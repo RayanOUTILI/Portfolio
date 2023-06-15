@@ -31,3 +31,13 @@ nav>ul>li>a::before {
 nav>ul>li>a:hover::before {
     width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+    nav{
+        padding-left: 1rem !important;
+        padding-right: 2rem !important;
+    }
+    .taille {
+        font-size: 1rem;
+    }
+}

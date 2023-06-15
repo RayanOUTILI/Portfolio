@@ -8,7 +8,7 @@ import gh from '../assets/icons/github.png';
 const Home = () => {
     return (
         <section id="home">
-            <div className="bg-[#f9f9f9] h-screen flex flex-col justify-center items-center">
+            <div className="home-conteneur bg-[#f9f9f9] h-screen flex flex-col justify-center items-center">
                 <div className='home-content w-2/3 text-left'>
                     <div className='main-content-left'>
                         <h1>Computer Science Student</h1>
@@ -23,7 +23,7 @@ const Home = () => {
                         </span>
                     </div>
                     <div className='main-content-right'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi nec nunc commodo placerat.</p>
+                        <h2>🚧&nbsp;En cours de développement&nbsp;!&nbsp;🚧</h2>
                     </div>
                 </div>
             </div>
