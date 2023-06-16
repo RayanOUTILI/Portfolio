@@ -92,9 +92,11 @@ code {
 
   .home-content {
     flex-direction: column;
+    width: 75% !important;
   }
 
   .home-conteneur {
     height: 80vh !important;
   }
 }
+

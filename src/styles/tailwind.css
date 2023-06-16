@@ -2,3 +2,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #2d2e32;
+}
+
+.dark-mode {
+    --background-color: #111111;
+    --text-color: #ffffff;
+}
