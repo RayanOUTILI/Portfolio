@@ -9,9 +9,12 @@
     }
 }
 
+nav>h1{
+    color: var(--text-color);
+}
 
 nav>ul>li>a {
-    color: black;
+    color: var(--text-color);
     font-weight: bold;
     text-decoration: no-underline;
     position: relative;

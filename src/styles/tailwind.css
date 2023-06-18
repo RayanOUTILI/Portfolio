@@ -5,10 +5,13 @@
 
 :root {
     --background-color: #f9f9f9;
+    --background-menu-color: #ffffff;
     --text-color: #2d2e32;
 }
 
 .dark-mode {
-    --background-color: #111111;
-    --text-color: #ffffff;
+    /* --background-color: #181717;
+    --background-menu-color: #333333;
+    --text-color: #ffffff; */
+    filter: invert(100%);
 }
