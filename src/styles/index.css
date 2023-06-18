@@ -100,3 +100,72 @@ code {
   }
 }
 
+#about li>img {
+  max-height: 3rem;
+  max-width: 3rem;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 780px) {
+  .stacks ul {
+    display: flex;
+    flex-direction: column !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    gap: 0 !important;
+  }
+
+  .stacks ul li {
+    margin-bottom: 1rem;
+  }
+
+  #about li>img {
+    max-height: 2.5rem;
+    max-width: 2.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  #about li>img {
+    max-height: 2.5rem;
+    max-width: 2.5rem;
+  }
+}
+
+#about li {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .09);
+  cursor: pointer;
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+}
+
+#about li::after {
+  content: attr(data-language);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  bottom: -1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#about li:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+

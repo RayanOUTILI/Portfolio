@@ -12,8 +12,8 @@ const Home = () => {
                 <div className='home-content w-2/3 text-left'>
                     <div className='main-content-left'>
                         <h1>Computer Science Student</h1>
-                        <p>I'm Rayan Outili and I'm currently studyin
-                             computer science at Universite Côte d'Azur.</p>
+                        <p>I'm Rayan Outili and I'm currently studying
+                            computer science at Universite Côte d'Azur.</p>
                         <span className="flex gap-4 mt-4">
                             <a aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/rayan-outili-8327b024a/">
                                 <img className="w-10 h-10" src={lk} alt="LinkedIn Icon" />
