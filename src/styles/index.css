@@ -100,12 +100,6 @@ code {
   }
 }
 
-@media screen and (max-width :600px){
-  .home-conteneur{
-    height: 120vh !important;
-  }
-}
-
 #about li>img {
   max-height: 3rem;
   max-width: 3rem;
