@@ -17,7 +17,7 @@ const About = () => {
         <>
             <section id="about">
                 <h1 className="text-4xl font-bold text-left ml-10 mt-10 mb-2">About Me</h1>
-                
+
                 <h2 className="text-2xl font-bold text-center mb-2 ">Front-end</h2>
                 <div className="stacks flex justify-center items-center w-[50%] m-auto">
                     <ul className="flex gap-6">

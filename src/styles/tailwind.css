@@ -8,10 +8,10 @@
     --background-menu-color: #ffffff;
     --text-color: #2d2e32;
 }
-
-.dark-mode {
+/*
+.dark-mode {*/
     /* --background-color: #181717;
     --background-menu-color: #333333;
     --text-color: #ffffff; */
-    filter: invert(100%);
-}
+   /* filter: invert(100%);*/
+/*}*/

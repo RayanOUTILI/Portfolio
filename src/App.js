@@ -26,9 +26,9 @@ const App = () => {
     <BrowserRouter>
       <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
         <Menu toggleDarkMode={toggleDarkMode} />
-        <Home />
         <Routes>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
         </Routes>
       </div>
