@@ -4,9 +4,11 @@ import "../styles/nav.css";
 import "../styles/index.css";
 import lk from '../assets/icons/linkedin.png';
 import gh from '../assets/icons/github.png';
+import About from './About';
 
 const Home = () => {
     return (
+        <>
         <section id="home">
             <div className="home-conteneur bg-[var(--background-color)] h-screen flex flex-col justify-center items-center">
                 <div className='home-content w-2/3 text-left'>
@@ -29,6 +31,8 @@ const Home = () => {
                 </div>
             </div>
         </section>
+        <About />
+        </>
     );
 };
 

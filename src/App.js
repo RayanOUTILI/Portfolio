@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Home from './components/Home';
@@ -22,20 +22,23 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+
   return (
-    <BrowserRouter>
-      <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
-        <Menu toggleDarkMode={toggleDarkMode} />
-        <Routes>
-        <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/About" element={<About />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
+          <Menu toggleDarkMode={toggleDarkMode} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/About" element={<About />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(<App />);
 
 export default App;

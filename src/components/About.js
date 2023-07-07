@@ -13,12 +13,44 @@ import Sql from "../assets/icons/sql.png";
 
 
 const About = () => {
+    window.addEventListener('scroll', revealOnScroll);
+
+    function revealOnScroll() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+
     return (
         <>
             <section id="about">
-                <h1 className="text-4xl font-bold text-left ml-10 mt-10 mb-2">About Me</h1>
+                <h1 className="text-4xl font-bold text-left ml-10 mt-24 mb-2">About Me</h1>
 
-                <h2 className="text-2xl font-bold text-center mb-2 ">Front-end</h2>
+                <div className="box-timeline reveal">
+                    <div className="ligne"></div>
+                    <div className="rond rond1" data-anim="1"></div>
+                    <div className="rond rond3" data-anim="3"></div>
+                    <div className="box b1" data-anim="1">
+                        <h2>Baccalauréat général</h2>
+                        <p>Lycée Thierry Maulnier</p>
+                        <p>Spécialités : Mathématiques et Sciences informatiques.</p>
+                    </div>
+                    <div className="box b2" data-anim="2">
+                        <h2>BUT Informatique</h2>
+                        <p>
+                            IUT Nice Côte d'Azur
+                        </p>
+                    </div>
+                </div>
+
+                <h2 className="text-2xl font-bold text-center mb-2 mt-6">Front-end</h2>
                 <div className="stacks flex justify-center items-center w-[50%] m-auto">
                     <ul className="flex gap-6">
                         <li data-language="HTML5">
@@ -39,7 +71,7 @@ const About = () => {
                     </ul>
                 </div>
 
-                <h2 className="text-2xl font-bold text-center mb-2">Back-end</h2>
+                <h2 className="text-2xl font-bold text-center mb-2 mt-6">Back-end</h2>
                 <div className="stacks flex justify-center items-center w-[50%] m-auto">
                     <ul className="flex gap-6">
                         <li data-language="Java">
@@ -59,11 +91,11 @@ const About = () => {
                         </li>
                     </ul>
                 </div>
-            </section>
+            </section >
         </>
-    )
-
-
+    );
 };
+
+
 
 export default About;
