@@ -14,6 +14,8 @@ import Sql from "../assets/icons/sql.png";
 
 const About = () => {
     window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('scroll', revealOnScrollXgauche);
+    window.addEventListener('scroll', revealOnScrollXdroite);
 
     function revealOnScroll() {
         var reveals = document.querySelectorAll('.reveal');
@@ -21,6 +23,32 @@ const About = () => {
             var windowHeight = window.innerHeight;
             var revealTop = reveals[i].getBoundingClientRect().top;
             var revealPoint = 150;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+    // stacks front
+    function revealOnScrollXgauche() {
+        var reveals = document.querySelectorAll('.revealx1');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 100;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+    // back r
+    function revealOnScrollXdroite() {
+        var reveals = document.querySelectorAll('.revealx2');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 100;
 
             if (revealTop < windowHeight - revealPoint) {
                 reveals[i].classList.add('active');
@@ -51,7 +79,7 @@ const About = () => {
                 </div>
 
                 <h2 className="text-2xl font-bold text-center mb-2 mt-6">Front-end</h2>
-                <div className="stacks flex justify-center items-center w-[50%] m-auto">
+                <div className="stacks flex justify-center items-center w-[50%] m-auto revealx1">
                     <ul className="flex gap-6">
                         <li data-language="HTML5">
                             <img src={HTML5} alt="HTML5"></img>
@@ -72,7 +100,7 @@ const About = () => {
                 </div>
 
                 <h2 className="text-2xl font-bold text-center mb-2 mt-6">Back-end</h2>
-                <div className="stacks flex justify-center items-center w-[50%] m-auto">
+                <div className="stacks flex justify-center items-center w-[50%] m-auto revealx2">
                     <ul className="flex gap-6">
                         <li data-language="Java">
                             <img src={Java} alt="Java"></img>

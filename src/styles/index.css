@@ -199,7 +199,7 @@ code {
   margin-bottom: 100px;
   /* border-top: solid 1px rgb(255, 0, 0);
   border-bottom: solid 1px black; */
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .ligne {
@@ -319,5 +319,29 @@ code {
 .reveal.active{
   opacity: 1;
   transform: translateY(0px);
+  pointer-events: auto;
+}
+
+/* translate gauche */
+.revealx2{
+  position: relative;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(250px);
+  pointer-events: none;
+}
+
+/* translate droite */
+.revealx1{
+  position: relative;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(-250px);
+  pointer-events: none;
+}
+
+.revealx1.active, .revealx2.active{
+  opacity: 1;
+  transform: translateX(0px);
   pointer-events: auto;
 }
