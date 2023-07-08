@@ -69,11 +69,15 @@ const About = () => {
                         <h2>Baccalauréat général</h2>
                         <p>Lycée Thierry Maulnier</p>
                         <p>Spécialités : Mathématiques et Sciences informatiques.</p>
+                        <p>Mention très bien</p>
                     </div>
                     <div className="box b2" data-anim="2">
                         <h2>BUT Informatique</h2>
                         <p>
                             IUT Nice Côte d'Azur
+                        </p>
+                        <p>
+                            Actuellement ici !
                         </p>
                     </div>
                 </div>

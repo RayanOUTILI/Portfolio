@@ -170,7 +170,7 @@ code {
 }
 
 #about li::after {
-  content: attr(data-language);
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -194,7 +194,7 @@ code {
 
 .box-timeline {
   width: 100%;
-  height: 510px;
+  height: 410px;
   position: relative;
   margin-bottom: 100px;
   /* border-top: solid 1px rgb(255, 0, 0);
@@ -203,11 +203,22 @@ code {
 }
 
 .ligne {
-  height: 510px;
-  width: 6px;
+  height: 410px;
+  width: 4px;
   margin: 0 auto;
-  background-color: #323131;
+  background-color: #393838;
   position: relative;
+}
+
+.ligne::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 10px;
+  border-top: 1px dashed black;
 }
 
 /* (flèche) */
@@ -219,15 +230,15 @@ code {
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #333;
-  top: calc(100% - 0px);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black;
+  top: calc(100% - 2px);
 }
 
 .rond {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: rgb(163, 225, 241);
   position: absolute;
@@ -245,32 +256,41 @@ code {
 }
 
 .rond3 {
-  top: 240px;
+  top: 205px;
 }
 
 .box {
   color: black;
   width: 400px;
-  min-height: 175px;
+  min-height: 100px;
   padding: 20px;
   border-radius: 3px;
   height: auto;
-  background-color: #d7f7ff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: rgb(255, 255, 255);
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  padding-right: 5px;
 }
 
 .b1 {
-  top: 35px;
-  left: calc(50% - 240px);
+  top: 10px;
+  left: calc(50% - 220px);
+  border-top: solid 1px rgba(38, 186, 249, 0.4);
+  border-right: solid 1px rgba(38, 186, 249, 0.4);
+  box-shadow: -8px 8px 8px rgba(38, 186, 249, 0.4); 
+  border-top-right-radius: 30px;
 }
 
 .b2 {
-  top: 280px;
-  left: calc(50% + 240px);
+  top: 215px;
+  left: calc(50% + 220px);
+  border-top: solid 1px rgba(38, 186, 249, 0.4);
+  border-left: solid 1px rgba(38, 186, 249, 0.4);
+  box-shadow: 8px 8px 8px 0px rgba(38, 186, 249, 0.4); 
+  border-top-left-radius: 30px;
 }
+
 
 .box p {
   line-height: 20px;
@@ -301,7 +321,7 @@ code {
   }
 
   .b2 {
-    top: 280px;
+    top: 220px;
     left: calc(50% + 100px);
     width: calc(100% - 275px);
   }
