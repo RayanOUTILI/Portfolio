@@ -10,14 +10,14 @@ const Menu = ({ toggleDarkMode }) => {
 			<h1 className="mr-auto taille font-bold ">Rayan Outili</h1>
 			<ul className="flex list-none space-x-4">
 				<li>
-					<Link to="/Home">Home</Link>
+					<Link to="/Home">Accueil</Link>
 				</li>
 				<li>
-					<Link to="/About">About</Link>
+					<Link to="/About">APropos</Link>
 				</li>
 				<li>
 					{/* provisoirement */}
-					<Link to="" onClick={(e) => e.preventDefault()}>Projects</Link>
+					<Link to="" onClick={(e) => e.preventDefault()}>Projets</Link>
 				</li>
 				<li>
 					{/* provisoirement */}

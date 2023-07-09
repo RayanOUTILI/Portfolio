@@ -1,5 +1,5 @@
-.root {
-  font-size: 16px;
+:root {
+  --about-p-color: rgb(184, 239, 250); /*rgb(158, 240, 255)*/
 }
 
 * {
@@ -193,13 +193,14 @@ code {
 
 
 .box-timeline {
-  width: 100%;
+  width: 50%;
   height: 410px;
   position: relative;
   margin-bottom: 100px;
   /* border-top: solid 1px rgb(255, 0, 0);
   border-bottom: solid 1px black; */
-  background-color: rgb(255, 255, 255);
+  margin-right: 5%;
+  margin-left: auto;
 }
 
 .ligne {
@@ -279,7 +280,8 @@ code {
   border-top: solid 1px rgba(38, 186, 249, 0.4);
   border-right: solid 1px rgba(38, 186, 249, 0.4);
   box-shadow: -8px 8px 8px rgba(38, 186, 249, 0.4); 
-  border-top-right-radius: 30px;
+  border-radius: 30px;
+  border-top-right-radius: 0px;
 }
 
 .b2 {
@@ -288,15 +290,68 @@ code {
   border-top: solid 1px rgba(38, 186, 249, 0.4);
   border-left: solid 1px rgba(38, 186, 249, 0.4);
   box-shadow: 8px 8px 8px 0px rgba(38, 186, 249, 0.4); 
-  border-top-left-radius: 30px;
+  border-radius: 30px;
+  border-top-left-radius: 0px;
 }
-
 
 .box p {
   line-height: 20px;
   font-size: 18px;
   margin: 5px 0 10px 0;
 }
+
+.about-p p{
+  margin-top: 3vh;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.about-p{
+  background-color: var(--about-p-color);
+  position: relative;
+  border-radius: 40px;
+}
+
+.about-p:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 50px;
+  right: auto;
+  top: auto;
+	bottom: -30px;
+	border: 20px solid;
+	border-color: var(--about-p-color) transparent transparent var(--about-p-color);
+}
+
+/* .about-p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  animation: border-animation 3s linear infinite;
+}
+
+@keyframes border-animation {
+  0% {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  50% {
+    border-color: #00b3ff;
+    box-shadow: 0 0 10px #73c9ff;
+  }
+  100% {
+    border-color: transparent;
+    box-shadow: none;
+  }
+} */
+
 
 @media screen and (max-width: 1000px) {
 
@@ -305,7 +360,11 @@ code {
   }
 
   .box {
-    padding: 10px;
+    padding: 10px 4px 10px 10px !important;
+  }
+
+  .box h2{
+    margin-bottom: 0.5rem !important;
   }
 
   .box p {
@@ -316,14 +375,36 @@ code {
 
   .b1 {
     top: 10px;
-    left: 23%;
+    left: 25%;
     width: 40%;
   }
 
   .b2 {
     top: 220px;
     left: calc(50% + 100px);
-    width: calc(100% - 275px);
+    width: calc(100% - 255px);
+  }
+
+  .box-timeline{
+    width: 100%;
+    margin-right: 0;
+    margin-left:0;
+    margin-top: 20px;
+  }
+
+  .about-p-t{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about-p{
+    width: 90% !important;
+    margin: 5% !important;
+  }
+
+  .about-p p{
+    font-size: 16px;
   }
 
 }
