@@ -8,6 +8,8 @@ import code from "../assets/icons/code.png";
 import link from "../assets/icons/link.png";
 import c from "../assets/icons/c.png";
 import python from "../assets/icons/python.png";
+import react from "../assets/icons/react.png";
+import tailwind from "../assets/icons/tailwindcss.png";
 
 const projectsData = [
     {
@@ -24,23 +26,15 @@ const projectsData = [
         url: "https://rayanoutili.github.io/convertisseurImages/",
         githubUrl: "https://github.com/RayanOUTILI/convertisseurImages",
         techno: [html, css, c, python]
+    },
+    {
+        title: "Portfolio",
+        description: "Mon Portfolio développé en ReactJS.",
+        url: "rayan-outili.fr",
+        githubUrl: "https://github.com/RayanOUTILI/Portfolio",
+        techno: [html, css, js, react, tailwind]
     }
 ];
-
-window.addEventListener('scroll', revealOnScrollX);
-
-function revealOnScrollX() {
-    var reveals = document.querySelectorAll('.revealx');
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = i % 2 === 0 ? 100 : 0; //on alterne l'anim selon l'index
-
-        if (revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add('active');
-        }
-    }
-}
 
 const Projects = () => {
     return (
@@ -49,8 +43,8 @@ const Projects = () => {
                 <div className="mt-20">
                     <h1 className="text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">Projets</h1>
                     {projectsData.map((project, index) => (
-                        //revealxINDEX pour alterner les anim
-                        <div key={index} className={`revealx${index+1} proj flex items-center border rounded-3xl gap-[5%] w-[60%] mt-[2%] m-auto bg-white`}>
+                        //revealxINDEX pour alterner les anim revealx${index+1}
+                        <div key={index} className={`reveal proj flex items-center border rounded-3xl gap-[5%] w-[60%] mt-[2%] m-auto bg-white`}>
                             {/* Partie gauche (iframe) */}
                             <div className="gauche w-65% relative">
                                 <a href={project.url} target="_blank" rel="noopener noreferrer">
@@ -64,7 +58,7 @@ const Projects = () => {
                                 <p className="text-gray-600 mt-2 justify-center flex items-center">{project.description}</p>
                                 <div className="techno flex justify-start gap-4 mt-4">
                                     {project.techno.map((techno, index) => (
-                                        <img className="h-[40px] w-[40px]" src={techno} alt="techno" key={index} />
+                                        <img className="h-[38px] w-[38px]" src={techno} alt="techno" key={index} />
                                     ))}
                                 </div>
                                 <div className="mt-6 flex items-center justify-start gap-4">
@@ -81,6 +75,7 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
+                    
                 </div>
             </div>
         </section>
