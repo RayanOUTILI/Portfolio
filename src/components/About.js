@@ -66,7 +66,7 @@ const About = () => {
 
                         <div className="about-p pl-[20px] pr-[20px] pb-[20px] w-[40%] h-[80%] ml-[2%] mr-[5%] mt-[10px] revealx1">
                             <p>Je m'appelle Rayan Outili, j'ai 18 ans et je suis étudiant en informatique.</p>
-                            <p>J'ai eu mon Baccalauréat en 2022 avec comme spécialité Numérique et sciences informatiques. Cette spécialité a été l'occasion pour moi de me découvrir une certain attrait pour ce domaine.</p>
+                            <p>J'ai eu mon Baccalauréat en 2022 avec comme spécialité Numérique et sciences informatiques. Cela m'a permis de me rendre compte que je voulais continuer dans cette branche.</p>
                             <p>J'ai donc fait mon entrée en études supérieures en BUT Informatique à l'IUT de Nice pour me consacrer pleinement à ce domaine.</p>
                         </div>
 

@@ -16,8 +16,7 @@ const Menu = ({ toggleDarkMode }) => {
 					<Link to="/About">APropos</Link>
 				</li>
 				<li>
-					{/* provisoirement */}
-					<Link to="" onClick={(e) => e.preventDefault()}>Projets</Link>
+					<Link to="/Projects">Projets</Link>
 				</li>
 				<li>
 					{/* provisoirement */}

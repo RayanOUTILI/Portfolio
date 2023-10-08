@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import Home from './components/Home';
 import About from './components/About';
 import './styles/tailwind.css';
+import Projects from './components/Projects';
 
 const App = () => {
 
@@ -32,7 +33,9 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/About" element={<About />} />
+            <Route path="/Projects" element={<Projects />} />
           </Routes>
+          <Projects />
         </div>
       </BrowserRouter>
     </>
