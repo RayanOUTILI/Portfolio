@@ -28,8 +28,15 @@ const projectsData = [
         techno: [html, css, c, python]
     },
     {
+        title: "Enquête écologique",
+        description: "Site web proposant une enquête aux entreprises de Nice sur leurs pratiques écologiques - réalisé en collaboration",
+        url: "https://rayanoutili.github.io/site-ecologie/",
+        githubUrl: "https://github.com/RayanOUTILI/site-ecologie",
+        techno: [html, css]
+    },
+    {
         title: "Moviedle",
-        description: "Page web permettant de deviner des films à partir d'une affiche floutée - réalisé à plusieurs",
+        description: "Page web permettant de deviner des films à partir d'une affiche floutée - réalisé en collaboration",
         url: "https://diosx17.github.io/MoviedleREWORK/",
         githubUrl: "https://github.com/Diosx17/MoviedleREWORK",
         techno: [html, css, js]
