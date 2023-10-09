@@ -28,6 +28,13 @@ const projectsData = [
         techno: [html, css, c, python]
     },
     {
+        title: "Moviedle",
+        description: "Page web permettant de deviner des films à partir d'une affiche floutée - réalisé à plusieurs",
+        url: "https://diosx17.github.io/MoviedleREWORK/",
+        githubUrl: "https://github.com/Diosx17/MoviedleREWORK",
+        techno: [html, css, js]
+    },
+    {
         title: "Portfolio",
         description: "Mon Portfolio développé en ReactJS.",
         url: "rayan-outili.fr",
