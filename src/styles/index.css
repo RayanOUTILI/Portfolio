@@ -3,6 +3,10 @@
   /*rgb(158, 240, 255)*/
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   border: none;
   outline: none;
