@@ -38,8 +38,8 @@ const projectsData = [
     {
         title: "Moviedle",
         description: "Page web permettant de deviner des films à partir d'une affiche floutée - réalisé en collaboration.",
-        url: "https://diosx17.github.io/MoviedleREWORK/",
-        githubUrl: "https://github.com/Diosx17/MoviedleREWORK",
+        url: "https://ThomasPorteletteGit.github.io/MoviedleREWORK/",
+        githubUrl: "https://github.com/ThomasPorteletteGit/MoviedleREWORK",
         techno: [html, css, js]
     },
     {
@@ -56,7 +56,7 @@ const PythonProjects = [
         title: "Geometry dash",
         description: "Programme utilisant le module Turtle de Python pour réaliser un visuel du jeu Geometry Dash.",
         url: [geometrydash],
-        githubUrl: "https://github.com/Diosx17/MoviedleREWORK",
+        githubUrl: "https://github.com/RayanOUTILI/GeometryDashTurtle",
         techno: [python]
     }
 ]

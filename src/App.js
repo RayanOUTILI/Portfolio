@@ -7,6 +7,7 @@ import About from './components/About';
 import './styles/tailwind.css';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Contact from './components/Contact'
 
 const App = () => {
 
@@ -31,14 +32,12 @@ const App = () => {
         <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
           <Menu toggleDarkMode={toggleDarkMode} />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Home" element={<Home />} />
+            <Route path="/" element={<><Home /><Projects /><Footer /></>} />
+            <Route path="/Home" element={<><Home /><Projects /><Footer /></>} />
             <Route path="/About" element={<About />} />
             <Route path="/Projects" element={<Projects />} />
-            <Route path="/Footer" element={<Footer />} />
+            <Route path="/Footer" element={<Contact />} />
           </Routes>
-          <Projects />
-          <Footer />
         </div>
       </BrowserRouter>
     </>
