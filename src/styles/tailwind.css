@@ -6,7 +6,11 @@
 :root {
     --background-color: #f9f9f9;
     --background-menu-color: #ffffff;
+    /* --background-menu-color: #0a192f; */
     --text-color: #2d2e32;
+    /* --text-color: #64ffda; */
+    
+
 }
 /*
 .dark-mode {*/
