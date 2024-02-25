@@ -64,9 +64,10 @@ const PythonProjects = [
 const Projects = () => {
     return (
         <section id="projets">
-            <div className="projets-conteneur bg-[#f9f9f9]">
-                <div className="mt-20">
-                    <h1 className="text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">Projets</h1>
+            {/* f9f9f9 */}
+            <div className="projets-conteneur bg-[white]">
+                <div className="padleft mt-20">
+                    <h1 className="title-trait text-4xl font-bold text-left ml-14 mt-24 pt-4 mb-2">Projets</h1>
                     {projectsData.map((project, index) => (
                         //revealxINDEX pour alterner les anim revealx${index+1}
                         <div key={index} className={`reveal proj flex items-center border rounded-3xl gap-[5%] w-[60%] mt-[2%] m-auto bg-white`}>
@@ -135,7 +136,7 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
-                    
+
                 </div>
             </div>
         </section>

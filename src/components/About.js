@@ -1,12 +1,13 @@
 import "../styles/index.css";
 import "../styles/tailwind.css";
-import Sql from "../assets/icons/sql.png";
+import SkillBlock from "./SkillBlock";
 
 
 const About = () => {
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('scroll', revealOnScrollXgauche);
     window.addEventListener('scroll', revealOnScrollXdroite);
+    window.addEventListener('scroll', revealOnScrollLineBar);
 
     function revealOnScroll() {
         var reveals = document.querySelectorAll('.reveal');
@@ -36,6 +37,19 @@ const About = () => {
     // back r
     function revealOnScrollXdroite() {
         var reveals = document.querySelectorAll('.revealx2');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 0;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+
+    function revealOnScrollLineBar() {
+        var reveals = document.querySelectorAll('.animation');
         for (var i = 0; i < reveals.length; i++) {
             var windowHeight = window.innerHeight;
             var revealTop = reveals[i].getBoundingClientRect().top;
@@ -91,10 +105,9 @@ const About = () => {
                 <div className="padleft overflow-hidden pb-12">
                     <h1 className="title-trait text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">Skills / Tools</h1>
 
-                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">Operating systems</h2>
+                    <h2 className="text-xl font-bold text-center mb-2 mt-6">Operating systems</h2>
                     <div className="stacks flex justify-center items-center w-[full] m-auto revealx1">
                         <ul className="flex gap-6">
-
                             <li>
                                 <img src="https://skillicons.dev/icons?i=windows" alt="Windows"></img>
                             </li>
@@ -110,11 +123,9 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">IDE</h2>
+                    <h2 className="text-xl font-bold text-center mb-2 mt-6">IDE</h2>
                     <div className="stacks flex justify-center items-center w-[full] m-auto revealx2">
                         <ul className="flex gap-6">
-
-
                             <li>
                                 <img src="https://skillicons.dev/icons?i=vscode" alt="VSCode"></img>
                             </li>
@@ -131,12 +142,12 @@ const About = () => {
                     </div>
 
 
-                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">Versioning / Build</h2>
+                    <h2 className="text-xl font-bold text-center mb-2 mt-6">Versioning / Build</h2>
                     <div className="stacks flex justify-center items-center w-[full] m-auto revealx1">
                         <ul className="flex gap-6">
-                            <li>
+                            {/* <li>
                                 <img src="https://skillicons.dev/icons?i=git" alt="Git"></img>
-                            </li>
+                            </li> */}
                             <li>
                                 <img src="https://skillicons.dev/icons?i=github" alt="Github"></img>
                             </li>
@@ -153,49 +164,27 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">Front-end</h2>
-                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx2">
-                        <ul className="flex gap-6">
-                            <li data-language="HTML5">
-                                <img src="https://skillicons.dev/icons?i=html" alt="HTML5"></img>
-                            </li>
-                            <li data-language="CSS3">
-                                <img src="https://skillicons.dev/icons?i=css" alt="CSS3"></img>
-                            </li>
-                            <li data-language="JavaScript">
-                                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript"></img>
-                            </li>
-                            <li data-language="TypeScript">
-                                <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript"></img>
-                            </li>
-                            <li data-language="React">
-                                <img src="https://skillicons.dev/icons?i=react" alt="React"></img>
-                            </li>
-                            <li data-language="TailwindCSS">
-                                <img src="https://skillicons.dev/icons?i=tailwind" alt="TailwindCSS"></img>
-                            </li>
-                        </ul>
+
+                    <h2 className="front-back text-2xl font-bold mb-2 mt-6">Front-end</h2>
+                    {/* front progress */}
+                    <div className="skills-conteneur flex flex-wrap justify-center items-center w-full m-auto revealx2">
+                        <SkillBlock skillName="HTML5" skillId="html5" skillPercentage={95} />
+                        <SkillBlock skillName="CSS3" skillId="css3" skillPercentage={90} />
+                        <SkillBlock skillName="JavaScript" skillId="javascript" skillPercentage={75} />
+                        <SkillBlock skillName="TypeScript" skillId="typescript" skillPercentage={50} />
+                        <SkillBlock skillName="React" skillId="react" skillPercentage={70} />
+                        <SkillBlock skillName="TailwindCSS" skillId="tailwind" skillPercentage={80} />
                     </div>
 
-                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">Back-end</h2>
-                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx1">
-                        <ul className="flex gap-6">
-                            <li data-language="Java">
-                                <img src="https://skillicons.dev/icons?i=java" alt="Java"></img>
-                            </li>
-                            <li data-language="Python">
-                                <img src="https://skillicons.dev/icons?i=python" alt="Python"></img>
-                            </li>
-                            <li data-language="C">
-                                <img src="https://skillicons.dev/icons?i=c" alt="C"></img>
-                            </li>
-                            <li data-language="Php">
-                                <img src="https://skillicons.dev/icons?i=php" alt="Php"></img>
-                            </li>
-                            <li data-language="Sql">
-                                <img src={Sql} alt="Sql"></img>
-                            </li>
-                        </ul>
+                    <h2 className="front-back text-2xl font-bold mb-2 mt-6">Back-end</h2>
+                    {/* back progress */}
+                    <div className="skills-conteneur flex flex-wrap justify-center items-center w-full m-auto revealx1">
+                        <SkillBlock skillName="Java" skillId="java" skillPercentage={85} />
+                        <SkillBlock skillName="Spring" skillId="spring" skillPercentage={70} />
+                        <SkillBlock skillName="C" skillId="C" skillPercentage={60} />
+                        <SkillBlock skillName="Php" skillId="Php" skillPercentage={75} />
+                        <SkillBlock skillName="Python" skillId="python" skillPercentage={65} />
+                        <SkillBlock skillName="C#" skillId="C#" skillPercentage={55} />
                     </div>
                 </div>
             </section >
