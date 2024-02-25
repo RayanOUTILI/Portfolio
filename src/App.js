@@ -8,6 +8,8 @@ import './styles/tailwind.css';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Contact from './components/Contact'
+import { useEffect } from 'react';
+
 
 const App = () => {
 
@@ -25,6 +27,38 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  useEffect(() => {
+    let elements;
+    const cursor = document.querySelector(".cursor");
+
+    if (cursor) {
+      document.addEventListener('mousemove', e => {
+        cursor.style.top = (e.pageY - 20) + "px";
+        cursor.style.left = (e.pageX - 20) + "px";
+      });
+
+      let elements = document.querySelectorAll("a, .link");
+
+      elements.forEach(element => {
+        element.addEventListener("mouseover", function (event) {
+          cursor.classList.add("red");
+        });
+
+        element.addEventListener("mouseout", function (event) {
+          cursor.classList.remove("red");
+        });
+      });
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', () => { });
+      elements.forEach(element => {
+        element.removeEventListener("mouseover", () => { });
+        element.removeEventListener("mouseout", () => { });
+      });
+    };
+  }, []);
+
 
   return (
     <>
@@ -40,6 +74,7 @@ const App = () => {
           </Routes>
         </div>
       </BrowserRouter>
+      <div className='cursor'></div>
     </>
   );
 };

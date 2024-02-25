@@ -59,7 +59,7 @@ const About = () => {
     return (
         <>
             <section id="about">
-                <div className="bg-[#f2f7fc]">
+                <div className="bg-[#f2f7fc] padleft">
                     <h1 className="text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">A propos</h1>
 
                     <div className="about-p-t flex">
