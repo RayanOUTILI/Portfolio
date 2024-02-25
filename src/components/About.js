@@ -1,14 +1,5 @@
 import "../styles/index.css";
 import "../styles/tailwind.css";
-import HTML5 from "../assets/icons/html.png";
-import CSS3 from "../assets/icons/css.png";
-import JS from "../assets/icons/js.png";
-import REACT from "../assets/icons/react.png";
-import TAILWIND from "../assets/icons/tailwindcss.png";
-import Java from "../assets/icons/java.png";
-import Python from "../assets/icons/python.png";
-import C from "../assets/icons/c.png";
-import Php from "../assets/icons/php.png";
 import Sql from "../assets/icons/sql.png";
 
 
@@ -59,8 +50,9 @@ const About = () => {
     return (
         <>
             <section id="about">
-                <div className="bg-[#f2f7fc] padleft">
-                    <h1 className="text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">A propos</h1>
+                {/* #f2f7fc */}
+                <div className="bg-[white] padleft">
+                    <h1 className="title-trait text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">A propos</h1>
 
                     <div className="about-p-t flex">
 
@@ -96,42 +88,109 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="overflow-hidden pb-12">
+                <div className="padleft overflow-hidden pb-12">
+                    <h1 className="title-trait text-4xl font-bold text-left ml-10 mt-24 pt-4 mb-2">Skills / Tools</h1>
+
+                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">Operating systems</h2>
+                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx1">
+                        <ul className="flex gap-6">
+
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=windows" alt="Windows"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=linux" alt="Linux"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=ubuntu" alt="Ubuntu"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=debian" alt="Debian"></img>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">IDE</h2>
+                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx2">
+                        <ul className="flex gap-6">
+
+
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=vscode" alt="VSCode"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=idea" alt="Intellij"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=eclipse" alt="Eclipse"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=sublime" alt="SublimeText"></img>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <h2 className="text-2xl font-bold text-center mb-2 mt-6">Versioning / Build</h2>
+                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx1">
+                        <ul className="flex gap-6">
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=git" alt="Git"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=github" alt="Github"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=gitlab" alt="Gitlab"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=gradle" alt="Gradle"></img>
+                            </li>
+                            <li>
+                                <img src="https://skillicons.dev/icons?i=maven" alt="Maven"></img>
+                            </li>
+
+                        </ul>
+                    </div>
+
                     <h2 className="text-2xl font-bold text-center mb-2 mt-6">Front-end</h2>
-                    <div className="stacks flex justify-center items-center w-[50%] m-auto revealx1">
+                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx2">
                         <ul className="flex gap-6">
                             <li data-language="HTML5">
-                                <img src={HTML5} alt="HTML5"></img>
+                                <img src="https://skillicons.dev/icons?i=html" alt="HTML5"></img>
                             </li>
                             <li data-language="CSS3">
-                                <img src={CSS3} alt="CSS3"></img>
+                                <img src="https://skillicons.dev/icons?i=css" alt="CSS3"></img>
                             </li>
                             <li data-language="JavaScript">
-                                <img src={JS} alt="JavaScript"></img>
+                                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript"></img>
+                            </li>
+                            <li data-language="TypeScript">
+                                <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript"></img>
                             </li>
                             <li data-language="React">
-                                <img src={REACT} alt="React"></img>
+                                <img src="https://skillicons.dev/icons?i=react" alt="React"></img>
                             </li>
                             <li data-language="TailwindCSS">
-                                <img src={TAILWIND} alt="TailwindCSS"></img>
+                                <img src="https://skillicons.dev/icons?i=tailwind" alt="TailwindCSS"></img>
                             </li>
                         </ul>
                     </div>
 
                     <h2 className="text-2xl font-bold text-center mb-2 mt-6">Back-end</h2>
-                    <div className="stacks flex justify-center items-center w-[50%] m-auto revealx2">
+                    <div className="stacks flex justify-center items-center w-[full] m-auto revealx1">
                         <ul className="flex gap-6">
                             <li data-language="Java">
-                                <img src={Java} alt="Java"></img>
+                                <img src="https://skillicons.dev/icons?i=java" alt="Java"></img>
                             </li>
                             <li data-language="Python">
-                                <img src={Python} alt="Python"></img>
+                                <img src="https://skillicons.dev/icons?i=python" alt="Python"></img>
                             </li>
                             <li data-language="C">
-                                <img src={C} alt="C"></img>
+                                <img src="https://skillicons.dev/icons?i=c" alt="C"></img>
                             </li>
                             <li data-language="Php">
-                                <img src={Php} alt="Php"></img>
+                                <img src="https://skillicons.dev/icons?i=php" alt="Php"></img>
                             </li>
                             <li data-language="Sql">
                                 <img src={Sql} alt="Sql"></img>

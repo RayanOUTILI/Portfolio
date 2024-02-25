@@ -77,6 +77,25 @@ code {
   font-weight: 700;
 }
 
+.title-trait {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.title-trait::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 30vw;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #233554;
+}
+
 @media (max-width: 950px) {
 
   #home h1,
@@ -160,14 +179,6 @@ code {
 
 }
 
-#about li>img {
-  max-height: 3rem;
-  max-width: 3rem;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-}
-
 @media (max-width: 780px) {
   /* .stacks ul {
     display: flex;
@@ -181,6 +192,11 @@ code {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+  }
+
+  #about li {
+    height: 5rem !important;
+    width: 5rem !important;
   }
 
 
@@ -210,8 +226,8 @@ code {
   box-shadow: 0 0 10px rgba(0, 0, 0, .09);
   cursor: pointer;
   display: flex;
-  height: 5rem;
-  width: 5rem;
+  height: 9rem;
+  width: 9rem;
 }
 
 #about li::after {
@@ -234,6 +250,13 @@ code {
 #about li:hover::after {
   opacity: 1;
   visibility: visible;
+}
+
+
+#about li>img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
 }
 
 
