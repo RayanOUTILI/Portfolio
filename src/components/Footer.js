@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
     return (
-        <section className="container mt-12 text-white h-[200px] w-[100%] justify-center flex items-center lg:p-5 bg-slate-900 flex-col" id="footer">
+        <section className="mt-12 text-white h-[200px] w-[100%] justify-center flex items-center lg:p-5 bg-slate-900 flex-col" id="footer">
             <div className="justify-center flex font-semibold">
                 <h2><a href="#home">↑Rayan Outili</a> </h2>
                 <p> ©{currentYear}</p>

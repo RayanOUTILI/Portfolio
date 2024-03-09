@@ -82,7 +82,7 @@ code {
   -moz-box-align: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 50%;
   white-space: nowrap;
 }
 
@@ -565,6 +565,7 @@ code {
   -webkit-animation: cursorAnimation .5s infinite alternate;
   animation: cursorAnimation .5s infinite alternate;
   pointer-events: none;
+  z-index: 1000;
 }
 
 .cursor::after {
@@ -576,7 +577,6 @@ code {
   opacity: .5;
   top: -10px;
   left: -10px;
-
 }
 
 
