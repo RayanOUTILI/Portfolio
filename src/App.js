@@ -66,11 +66,11 @@ const App = () => {
         <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
           <Menu toggleDarkMode={toggleDarkMode} />
           <Routes>
-            <Route path="/" element={<><Home /><Projects /><Footer /></>} />
-            <Route path="/Home" element={<><Home /><Projects /><Footer /></>} />
+            <Route path="/" element={<><Home /><Projects /><Contact /><Footer /></>} />
+            <Route path="/Home" element={<><Home /><Projects /><Contact /><Footer /></>} />
             <Route path="/About" element={<About />} />
             <Route path="/Projects" element={<Projects />} />
-            <Route path="/Footer" element={<Contact />} />
+            <Route path="/Footer" element={<><Contact /> <Footer /></>} />
           </Routes>
         </div>
       </BrowserRouter>
