@@ -109,7 +109,7 @@ const Projects = () => {
                             <div className="gauche w-65% relative">
                                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                                     <img src={project.url} id="iframe" title={project.title} className="iframe w-[100vw] h-[40vh] m-[3%]" alt={project.title} />
-                                    {console.log(project.url)}
+                                    {/* {console.log(project.url)} */}
                                 </a>
                             </div>
 
