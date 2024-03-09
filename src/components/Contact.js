@@ -6,7 +6,7 @@ const Contact = () => {
             <h1 className="title-trait text-4xl font-bold text-left ml-14 mt-24 pt-4 mb-2">Contact</h1>
 
             <div className="block" id="contact">
-                <p className="text-center mt-6 text-xl">N'hésitez pas à <a href="mailto:rayan.outili@gmail.com">me contacter</a> pour plus d'informations !</p>
+                <p className="text-center mt-6 text-xl">N'hésitez pas à <a href="mailto:rayan.outili@gmail.com" className='underline'>me contacter</a> pour plus d'informations !</p>
                 <form action="https://formsubmit.co/rayan.outili@gmail.com" method='POST' id="contact-block">
                     <div className="contact-input">
                         <label htmlFor="name">Nom</label>
