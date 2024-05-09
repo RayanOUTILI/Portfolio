@@ -9,8 +9,15 @@ import link from "../assets/icons/link.png";
 import c from "../assets/icons/c.png";
 import python from "../assets/icons/python.png";
 import react from "../assets/icons/react.png";
+import node from "../assets/icons/node.png";
 import tailwind from "../assets/icons/tailwindcss.png";
 import geometrydash from "../assets/img/geometrydash.png";
+import erp from "../assets/img/erp_station_service.png";
+import proftracker from "../assets/img/proftracker.png";
+import java from "../assets/icons/java.png";
+import php from "../assets/icons/php.png";
+import sql from "../assets/icons/sql.png";
+import reseausocial from "../assets/img/reseau_social.png";
 
 const projectsData = [
     {
@@ -44,14 +51,36 @@ const projectsData = [
     },
     {
         title: "Portfolio",
-        description: "Mon Portfolio développé en ReactJS.",
+        description: "Mon Portfolio développé en ReactJS et Tailwind.",
         url: "https://rayan-outili.fr",
         githubUrl: "https://github.com/RayanOUTILI/Portfolio",
-        techno: [html, css, js, react, tailwind]
+        techno: [react, tailwind]
     }
 ];
 
-const PythonProjects = [
+const NoIframeProjectsData = [
+    {
+        title: "Réseau social",
+        description: "Réseau social développé en PHP, JS, CSS et SQL respectant le modèle MVC.",
+        url: [reseausocial],
+        githubUrl: "https://github.com/RayanOUTILI/ReseauSocial",
+        techno: [php, js, css, sql]
+    },
+    {
+        title: " ERP station service",
+        description: "Application web permettant de gérer les stocks, les ventes, les fournisseurs d'une station service.",
+        url: [erp],
+        githubUrl: "https://github.com/RayanOUTILI/ERP_station_service",
+        techno: [html, css, js, react, node]
+    },
+    {
+        title: "ProfTracker",
+        description: "Application mobile Android mettant en relation des élèves et des professeurs pour des cours personnalisés.",
+        url: [proftracker],
+        site: "https://www.youtube.com/watch?v=ohB31Cl6fMw",
+        githubUrl: "https://github.com/RayanOUTILI/ProfTracker",
+        techno: [java]
+    },
     {
         title: "Geometry dash",
         description: "Programme utilisant le module Turtle de Python pour réaliser un visuel du jeu Geometry Dash.",
@@ -102,13 +131,17 @@ const Projects = () => {
                         </div>
                     ))}
                     {/* python project img /- iframe */}
-                    {PythonProjects.map((project, index) => (
+                    {NoIframeProjectsData.map((project, index) => (
                         //revealxINDEX pour alterner les anim revealx${index+1}
                         <div key={index} className={`reveal proj flex items-center border rounded-3xl gap-[5%] w-[60%] mt-[2%] m-auto bg-white`}>
                             {/* Partie gauche (iframe) */}
-                            <div className="gauche w-65% relative">
+                            <div className={`gauche w-65% relative ${project.title === "ProfTracker" ? 'h-[40vh] relative flex justify-center items-center' : ''}`}>
                                 <a href={project.url} target="_blank" rel="noopener noreferrer">
-                                    <img src={project.url} id="iframe" title={project.title} className="iframe w-[100vw] h-[40vh] m-[3%]" alt={project.title} />
+                                    {project.title === "ProfTracker" ? (
+                                        <img src={project.url} id="iframe" title={project.title} className="iframe w-[100vw] h-[15vh] m-[3%]" alt={project.title} />
+                                    ) : (
+                                        <img src={project.url} id="iframe" title={project.title} className="iframe w-[100vw] h-[40vh] m-[3%]" alt={project.title} />
+                                    )}
                                     {/* {console.log(project.url)} */}
                                 </a>
                             </div>
@@ -123,10 +156,17 @@ const Projects = () => {
                                     ))}
                                 </div>
                                 <div className="mt-6 flex items-center justify-start gap-4">
-                                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="link  flex items-center">
-                                        <img src={link} alt="link-icon" className="w-4 h-4 mr-1" />
-                                        Site
-                                    </a>
+                                    {project.site ? ( // si lien site différent de img
+                                        <a href={project.site} target="_blank" rel="noopener noreferrer" className="link flex items-center">
+                                            <img src={link} alt="link-icon" className="w-4 h-4 mr-1" />
+                                            Site
+                                        </a>
+                                    ) : (
+                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="link flex items-center">
+                                            <img src={link} alt="link-icon" className="w-4 h-4 mr-1" />
+                                            Site
+                                        </a>
+                                    )}
                                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="link flex items-center">
                                         <img src={code} alt="code-icon" className="w-4 h-4 mr-1" />
                                         Code
