@@ -272,7 +272,7 @@ code {
 }
 
 .ligne {
-  height: 410px;
+  height: 610px;
   width: 4px;
   margin: 0 auto;
   background-color: #393838;
@@ -328,6 +328,10 @@ code {
   top: 205px;
 }
 
+.rond4{
+  top: 380px;
+}
+
 .box {
   color: black;
   width: 400px;
@@ -362,6 +366,16 @@ code {
   border-top-left-radius: 0px;
 }
 
+.b3 {
+  top: -215px;
+  left: calc(50% - 420px);
+  border-top: solid 1px rgba(38, 186, 249, 0.4);
+  border-right: solid 1px rgba(38, 186, 249, 0.4);
+  box-shadow: -8px 8px 8px rgba(38, 186, 249, 0.4);
+  border-radius: 30px;
+  border-top-right-radius: 0px;
+}
+
 .box p {
   line-height: 20px;
   font-size: 18px;
@@ -371,7 +385,7 @@ code {
 .about-p p {
   margin-top: 3vh;
   text-align: justify;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .about-p {
@@ -450,6 +464,11 @@ code {
   .b2 {
     top: 220px;
     left: calc(50% + 100px);
+    width: calc(100% - 255px);
+  }
+
+  .b3{
+    left: 25px;
     width: calc(100% - 255px);
   }
 

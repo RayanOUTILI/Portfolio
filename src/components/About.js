@@ -61,6 +61,8 @@ const About = () => {
         }
     }
 
+    const age = () => new Date().getFullYear() - 2005;
+
     return (
         <>
             <section id="about">
@@ -71,15 +73,16 @@ const About = () => {
                     <div className="about-p-t flex">
 
                         <div className="about-p pl-[20px] pr-[20px] pb-[20px] w-[40%] h-[80%] ml-[2%] mr-[5%] mt-[10px] revealx1">
-                            <p>Je m'appelle Rayan Outili, j'ai 19 ans et je suis étudiant en informatique.</p>
-                            <p>J'ai eu mon Baccalauréat en 2022 avec comme spécialité Numérique et sciences informatiques. Cela m'a permis de me rendre compte que je voulais continuer dans cette branche.</p>
-                            <p>J'ai donc fait mon entrée en études supérieures en BUT Informatique à l'IUT de Nice pour me consacrer pleinement à ce domaine.</p>
+                            <p>Étudiant en informatique de {age()} ans, je suis passionné par le développement logiciel et plus généralement par les nouvelles technologies.</p>
+                            <p>Après avoir obtenu mon Baccalauréat en 2022 avec une spécialisation en Numérique et Sciences Informatiques, j'ai poursuivi mes études en BUT Informatique à l'IUT de Nice, où j'ai développé des bases solides en programmation et en gestion de projets.</p>
+                            <p>Actuellement étudiant à Polytech Nice Sophia, je continue mon parcours en école d'ingénieurs dans le but de devenir ingénieur logiciel.</p>
                         </div>
 
                         <div className="box-timeline reveal">
                             <div className="ligne"></div>
                             <div className="rond rond1" data-anim="1"></div>
                             <div className="rond rond3" data-anim="3"></div>
+                            <div className="rond rond4" data-anim="4"></div>
                             <div className="box b1" data-anim="1">
                                 <h2>Baccalauréat général - 2022</h2>
                                 <p>Lycée Thierry Maulnier</p>
@@ -95,8 +98,14 @@ const About = () => {
                                     Parcours : réalisation d'applications.
                                 </p>
                                 <p>
-                                    BUT1 : validé  -  BUT2 : en cours
+                                    BUT1 : validé  -  BUT2 : validé
                                 </p>
+                            </div>
+                            <div className="box b3 revealx1" data-anim="4">
+                                <h2>Diplôme d'ingénieur - 2024</h2>
+                                <p>Polytech Nice Sophia</p>
+                                <p>Ingénieur logicel</p>
+                                <p>Spécialisation : à définir.</p>
                             </div>
                         </div>
                     </div>
